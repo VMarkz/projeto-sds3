@@ -11,18 +11,18 @@ public class SaleDto {
     private Integer deals;
     private Double amount;
     private LocalDate date;
-    private SellerDto sellerDto;
+    private SellerDto seller;
 
     public SaleDto() {
     }
 
-    public SaleDto(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDto sellerDto) {
+    public SaleDto(Long id, Integer visited, Integer deals, Double amount, LocalDate date, SellerDto seller) {
         this.id = id;
         this.visited = visited;
         this.deals = deals;
         this.amount = amount;
         this.date = date;
-        this.sellerDto = sellerDto;
+        this.seller = seller;
     }
 
     public SaleDto(Sale sale) {
@@ -31,7 +31,7 @@ public class SaleDto {
         this.deals = sale.getDeals();
         this.amount = sale.getAmount();
         this.date = sale.getDate();
-        this.sellerDto = new SellerDto(sale.getSeller());
+        this.seller = new SellerDto(sale.getSeller());
     }
 
     public Long getId() {
@@ -74,11 +74,11 @@ public class SaleDto {
         this.date = date;
     }
 
-    public SellerDto getSellerDto() {
-        return sellerDto;
+    public SellerDto getSeller() {
+        return seller;
     }
 
-    public void setSellerDto(SellerDto sellerDto) {
-        this.sellerDto = sellerDto;
+    public void setSeller(SellerDto sellerDto) {
+        this.seller = sellerDto;
     }
 }
