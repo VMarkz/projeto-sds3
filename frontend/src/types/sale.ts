@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { type } from "os";
 import { Seller } from "./seller";
 
@@ -26,4 +27,9 @@ export type SaleSuccess = {
     sellerName : string;
     visited : number;
     deals : number;
+=======
+export type SaleSum = {
+    sellerName: string,
+    sum: number
+>>>>>>> 56fd386e4ee5d80ccd089c0439452d15520e4c9c
 }
